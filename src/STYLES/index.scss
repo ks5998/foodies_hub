@@ -1,5 +1,6 @@
 @import "partials/animations.scss";
 @import "partials/navbar.scss";
+@import "partials/heroSection.scss";
 
 :root{
     --background-color: white;
@@ -44,6 +45,7 @@ img{
 .section{
     display: flex;
     align-items: center;
+    margin-bottom: 3vw;
 
     .title{
         color: var(--text-color);
@@ -73,73 +75,47 @@ img{
         font-weight: bold;
         letter-spacing: 1px;
         border-radius: 5px;
-        box-shadow: 0 2px 6px var(--shadow-color);
+        box-shadow: 0 2px 6px grey;
         &:hover{
             box-shadow: 0 1px 3px var(--shadow-color);
         }
     }
 }
 
-/*===============================HeroSection.jsx=========================*/
+/*=================================ImproveSkills.jsx=========================*/
 
-.section.hero{
-    .typography{
-        padding-right: 1em;
+.section.improve-skills{
+    .col.img{
+        img{
+            border-radius: 15px;
+            width: 100%;
+        }
     }
 
-    .gallery{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.7vw;
+    .col.typography{
+        padding-left: 2em;
 
-        .custom-image{
-            border-radius: 5px;
-            overflow: hidden;
-            transform: sclae(0);
+        .skill-item{
+            border-left: .2em solid var(--primary-color);
+            margin-bottom: .5em;
+            padding: .1em 0 .1em .5em;
+            line-height: 2em;
+            letter-spacing: 1px;
+            font-size: larger;
+            color: var(--text-light); 
+            transform: translateX(100%);
             opacity: 0;
-            animation: 0.5s popOut forwards;
-            &:nth-child(2){
-                animation-delay: .1s;
-            }
-            &:nth-child(3){
-                animation-delay: .2s;
-            }
-            &:nth-child(6){
-                animation-delay: .3s;
-            }
-            &:nth-child(9){
-                animation-delay: .4s;
-            }
-            &:nth-child(8){
-                animation-delay: .5s;
-            }
-            &:nth-child(7){
-                animation-delay: .6s;
-            }
-            &:nth-child(4){
-                animation-delay: .7s;
-            }
-            &:nth-child(5){
-                animation-delay: .8s;
+
+            animation: .7s slideInRight forwards;
+            @for $i from 1 through 7 {
+                &:nth-child( #{$i} ){
+                    animation-delay: #{$i* 0.1}s;
+                }
             }
         }
     }
 }
 
-/*=================================CustomImages.jsx========================*/
 
-.custom-image{
-    background-color: red;
-    height: 0;
-    width: 100%;
-    position: relative;
 
-    img{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-}
 
