@@ -124,6 +124,56 @@ a{
     padding-inline: 15vw;
 }
 
+/*-----------------Sidebar.jsx---------------*/
+@import "partials/animations.scss";
+
+.sidebar{
+    position: fixed;
+    padding-top: 25%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: var(--background-color);
+    box-shadow: 0 0 0 1000px rgba(0,0,0,0.2),
+               3px 0 5px var(--shadow-color); 
+    animation: 0.3s slideInLeft;
+
+    .sidebar-link{
+        display: block;
+        padding: 1.5em;
+        border-left: .4em solid transparent;
+        margin-bottom: 1em;
+        color: var(--text-color);
+        font-weight: 500;
+        font-size: 1.1em;
+        transform: translateX(-100%);
+
+        animation: 0.3s slideInLeft forwards;
+        @for $i from 1 through 3 {
+            &:nth-child( #{$i} ){
+                animation-delay: #{$i* 0.1}s;
+            }
+        }
+
+        &.active{
+            border-left-color: var(--primary-color);
+        }
+        &:hover{
+            border-left-color: var(--primary-color);
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        svg{
+            width: 1.2em;
+            margin-right: .5em;
+        }
+    }
+}
+
+
+/*-----------------media queries--------------*/
+
 @media screen and (max-width: 760px) {
     .navbar{
         .nav-links{
