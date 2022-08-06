@@ -21,6 +21,7 @@
 }
 
 body{
+    padding-top: 55px;
     font-size: var(--font-size);
     font-family: 'Mouse Memoirs', sans-serif;;
 }
@@ -34,7 +35,7 @@ img{
 }
 
 .container{
-    padding-inline: 15vw;
+    padding-inline: 25vw;
 }
 
 /*==========================App.js============================*/
@@ -47,6 +48,7 @@ img{
     display: flex;
     align-items: center;
     margin-bottom: 3vw;
+    flex-wrap: wrap;
 
     .title{
         color: var(--text-color);
@@ -119,9 +121,11 @@ img{
 
 /*=================================Quotes.jsx=========================*/
 
-.section.quote{
+.quote{
     color: var(--text-light);
+    width: 100%;
     letter-spacing: 1.5px;
+    align-items: center;
 }
 
 /*=================================Footer.jsx=========================*/
@@ -152,5 +156,70 @@ img{
             font-size: 1.5em;
             margin-bottom: 1em;
         }
+    }
+}
+
+/*===========================media queries===============================*/
+
+@media screen and (max-width: 1580px){
+    .container{
+        padding-inline: 15vw;
+    }
+    
+}
+
+@media screen and (max-width: 1280px){
+    .container{
+        padding-inline: 18vw;
+    }
+    
+}
+
+@media screen and (max-width: 1050px){
+    .container{
+        padding-inline: 12vw;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .section{
+        .col{
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }
+
+    .skill-item{
+        display: inline-block;
+        margin: 1em;
+    }
+
+    .section.improve-skills .btn{
+        display: block;
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+
+    .container{
+        padding-inline: 6vw;
+    }
+
+    .footer{
+        grid-template-columns: repeat(4, 1fr);
+
+        .footer-section:nth-child(1){
+            grid-column: span 4;
+        }
+        .footer-section:nth-child(2), .footer-section:nth-child(3){
+            grid-column: span 2;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        padding-inline: 3vw;
     }
 }

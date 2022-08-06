@@ -5,7 +5,7 @@ export default function Quotes(){
 
     return(
         <>
-        <div className="section quote">
+        <div className="quote">
             <Carousel 
             className="container"
                 autoPlay={true} 
