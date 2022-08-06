@@ -21,9 +21,9 @@
 }
 
 body{
-    padding-top: 55px;
+    padding-top: 85px;
     font-size: var(--font-size);
-    font-family: 'Mouse Memoirs', sans-serif;;
+    font-family: 'Mouse Memoirs', sans-serif;
 }
 
 a{
@@ -36,6 +36,11 @@ img{
 
 .container{
     padding-inline: 25vw;
+}
+
+.section{
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /*==========================App.js============================*/
