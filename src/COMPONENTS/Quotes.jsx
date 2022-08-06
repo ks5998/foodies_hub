@@ -7,6 +7,7 @@ export default function Quotes(){
         <>
         <div className="section quote">
             <Carousel 
+            className="container"
                 autoPlay={true} 
                 infiniteLoop
                 showArrows={false}

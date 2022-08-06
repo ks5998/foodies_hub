@@ -1,6 +1,7 @@
 @import "partials/animations.scss";
 @import "partials/navbar.scss";
 @import "partials/heroSection.scss";
+@import "partials/chief.scss";
 
 :root{
     --background-color: white;
@@ -123,5 +124,33 @@ img{
     letter-spacing: 1.5px;
 }
 
+/*=================================Footer.jsx=========================*/
 
+.footer{
+    background-color: #0f0f0f;
+    color: white;
+    padding-block: 3em;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1em;
 
+    .footer-section{
+        p{
+            opacity: .5;
+            margin-bottom: .9em;
+            letter-spacing: 1px;
+            cursor: pointer;
+
+            &:hover{
+                color: var(--primary-color);
+                filter: brightness(200%);
+            }
+        }
+        p.title{
+            opacity: 1;
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+    }
+}

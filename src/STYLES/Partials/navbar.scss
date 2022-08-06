@@ -1,5 +1,5 @@
 .navbar{
-    height: 55px;
+    height: 60px;
     background-color: var(--background-color);
     box-shadow:  0 3px 6px var(--shadow-color);
     color: var(--text-color); 
@@ -8,13 +8,23 @@
     align-items: center;
 
     .logo{
-        font-size: 1.5em;
-        font-weight: bolder;
+        font-size: 2.3em;
+        font-weight: bold;
         color: var(--primary-color);
-        text-shadow: 0 1px 3px var(--shadow-color);
-        letter-spacing: 1px;
-        span{
+        text-shadow: 0 1px 3px grey;
+        letter-spacing: 2.8px;
+        .f{
+            font-size: 1.8em;
+            font-weight: bolder;
+        }
+        .oo{
             color: var(--text-color);
+            font-size: 1.3em;
+            font-weight: bolder;
+        }
+        .h{
+            font-size: 1.5em;
+            font-weight: bolder;
         }
     }
 

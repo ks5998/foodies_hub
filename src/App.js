@@ -1,3 +1,5 @@
+import Chiefs from "./COMPONENTS/Chiefs";
+import Footer from "./COMPONENTS/Footer";
 import HeroSection from "./COMPONENTS/HeroSection";
 import ImproveSkills from "./COMPONENTS/ImproveSkills";
 import Navbar from "./COMPONENTS/Navbar";
@@ -11,7 +13,9 @@ function App() {
         <HeroSection />
         <ImproveSkills />
         <Quotes />
+        <Chiefs />
       </div>
+        <Footer />
     </div>
   );
 }

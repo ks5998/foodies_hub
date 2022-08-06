@@ -32,7 +32,7 @@ export default function Navbar(){
     return(
         <>
         <div className="navbar container">
-            <a href="#" className="logo">F<span>oo</span>diesHub</a>
+            <a href="#" className="logo"><span className="f">F</span><span className="oo">oo</span>dies<span className="h">H</span>ub</a>
             <div className="nav-links">
                 {
                     links.map((link) => (
