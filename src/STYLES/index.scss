@@ -24,6 +24,7 @@ body{
     padding-top: 85px;
     font-size: var(--font-size);
     font-family: 'Mouse Memoirs', sans-serif;
+    background-color: var(--background-light);
 }
 
 a{
@@ -277,6 +278,10 @@ img{
 .section{
     &.d-block{
         display: block;
+
+        h2{
+            color: var(--text-color);
+        }
     }
 }
 
@@ -285,7 +290,7 @@ img{
     padding: 1em;
     border-radius: 5px;
     border-left: .5em solid var(--primary-color);
-    background-color: var(--background-color);
+    background-color: var(--background-light);
     margin-top: 1em;
     display: flex;
     gap: 1em;
