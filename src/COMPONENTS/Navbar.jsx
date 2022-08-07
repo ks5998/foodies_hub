@@ -38,7 +38,7 @@ export default function Navbar(){
             <div className="nav-links">
                 {
                     links.map((link) => (
-                        <Link to={link.path} className={ location.pathname == link.path ? "sidebar-link active" : "sidebar-link" } key={link.name}>{link.name}</Link>
+                        <Link to={link.path} className={ location.pathname === link.path ? "sidebar-link active" : "sidebar-link" } key={link.name}>{link.name}</Link>
                     ))
                 }
             </div>
